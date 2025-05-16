@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+/* Scrollbar ka outer part */
+::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  /* Scrollbar ke andar ka track (background) */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+  
+  /* Scrollbar ka thumb (jo move karta hai) */
+  ::-webkit-scrollbar-thumb {
+    background: #1359e4;
+    border-radius: 10px;
+  }
+  
+  /* Jab user hover kare thumb par */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(55, 187, 121);
+    cursor: pointer;
+  }
+  
