@@ -1,22 +1,61 @@
-import React from 'react'
-import { FaFilter } from "react-icons/fa";
+'use client';
+
+import React, { useState } from 'react';
+import { FaFilter, FaSearch, FaTimes } from "react-icons/fa";
+import { RiFilterOffFill } from "react-icons/ri";
+
 import { MdEdit } from "react-icons/md";
 export default function Newslatter() {
+    const [showSearchBar, setShowSearchBar] = useState(false); // 🔁 toggle input visibility
+    const [searchText, setSearchText] = useState(''); // 📄 input value
+
     return (
         <>
-            <section className='mt-5 max-w-full rounded-md  ' style={{ border: "1px solid #ccc" }} id='newslatterForm'>
-                <div className=' bg-slate-100 flex p-4 justify-between items-center form-heading'>
-                    <div className=''>
-                        <h3 className='text-[26px] font-semibold'>Newsletters Management</h3>
+            {/* 🔍 Top search box - only visible when toggled */}
+            {showSearchBar && (
+                <div className='flex items-center gap-2 px-5 mt-5'>
+                    <input
+                        type="text"
+                        value={searchText}
+                        onChange={(e) => setSearchText(e.target.value)}
+                        placeholder="Search Name"
+                        className='w-[300px] border border-gray-400 p-2 rounded-md'
+                    />
+                    {/* 🔍 Search icon button (just like image) */}
+                    <button className='bg-blue-700 text-white p-3 rounded-md'>
+                        <FaSearch />
+                    </button>
+                </div>
+            )}
+
+            {/* Table section */}
+            <section className='mt-5 max-w-full rounded-md' style={{ border: "1px solid #ccc" }} id='userForm'>
+                {/* Table header area */}
+                <div className='bg-slate-100 flex p-4 justify-between items-center form-heading'>
+                    <div>
+                        <h3 className='text-[26px] font-semibold'>NewsLatter</h3>
                     </div>
+
+                    {/* Action buttons */}
                     <div className='flex items-center gap-2 mr-3'>
-                        <div className='text-white font-bold w-[40px] h-[40px] rounded-sm flex justify-center items-center bg-blue-700'>
-                            <FaFilter className='' />
-                        </div>
-                        <button className='bg-green-700 rounded-sm py-2 px-4 font-semibold text-sm text-white'>Change Status</button>
-                        <button className='bg-red-700 rounded-sm py-2.5 px-5 font-semibold text-sm text-white'>Delete</button>
+                        {/* Toggle Search bar - uses FaFilter / FaTimes icon */}
+                        <button
+                            onClick={() => setShowSearchBar(!showSearchBar)}
+                            className='text-white font-bold w-[40px] h-[40px] rounded-sm flex justify-center items-center bg-blue-700'
+                        >
+                            {showSearchBar ? <RiFilterOffFill /> : <FaFilter />}
+                        </button>
+
+                        <button className='bg-green-700 rounded-sm py-2 px-4 font-semibold text-sm text-white'>
+                            Change Status
+                        </button>
+                        <button className='bg-red-700 rounded-sm py-2.5 px-5 font-semibold text-sm text-white'>
+                            Delete
+                        </button>
                     </div>
                 </div>
+
+                {/* Table content */}
                 <div className='form px-4 '>
                     <table className='w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400'>
                         <thead className='text-xs h-[40px] text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400'>
