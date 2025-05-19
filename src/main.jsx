@@ -1,14 +1,13 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import 'dropify/dist/css/dropify.min.css';
-import 'dropify/dist/js/dropify.min.js';
 import $ from 'jquery';
+import 'dropify/dist/js/dropify.min.js';
+import 'dropify/dist/css/dropify.min.css';
+
 import Dashboard from './Pages/Dashboard.jsx'
 import { BrowserRouter, Route, Routes } from 'react-router'
-import MainLayout from './Common/MainLayout.jsx'
 import Home from './Pages/Home.jsx'
-import Enquiry from './Pages/Enquiry.jsx'
 import ViewUser from './Pages/ViewUser.jsx'
 import Contactenquiry from './Pages/Contactenquiry.jsx'
 import Newslatter from './Pages/Newslatter.jsx'

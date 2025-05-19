@@ -1,4 +1,5 @@
 import React from 'react'
+import DropifyInput from '../Dropify/DropifyInput'
 
 export default function AddSubSubCategory() {
     return (
@@ -10,11 +11,11 @@ export default function AddSubSubCategory() {
                 <div>
                     <form action="" className='p-2'>
                         <div className='grid grid-cols-[35%_auto] gap-5'>
-                            <div className='' style={{ border: "1px solid red" }}>
-                                <label htmlFor="" className='text-[16px] font-semibold'>Category Image</label>
-                                <input type="file" className='' />
-                            </div>
                             <div>
+                                <label className="font-semibold block mb-2">Choose Image</label>
+                                <DropifyInput />
+                            </div>
+                            <div className='mt-2'>
                                 <label htmlFor="" className='text-[16px] font-semibold'>Parent Category Name</label>
                                 <br />
                                 <select name="" id="" className='w-full text-sm  border-2 shadow-sm border-gray-300 h-[40px] p-2 rounded-sm mb-5'>

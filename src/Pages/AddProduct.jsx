@@ -1,4 +1,5 @@
 import React from 'react'
+import DropifyInput from '../Dropify/DropifyInput'
 
 export default function AddProduct() {
     return (
@@ -11,25 +12,22 @@ export default function AddProduct() {
                     <form action="" className='p-2'>
                         <div className='grid grid-cols-3 gap-5'>
                             <div>
-                                <div className='h-80' style={{ border: "1px solid red" }}>
-                                    <label htmlFor="" className='text-[16px] font-semibold'>Category Image</label>
-                                    <input type="file" className='' />
-
+                                <div>
+                                    <label className="font-semibold block mb-2">Choose Image</label>
+                                    <DropifyInput />
                                 </div>
-                                <div className='h-80' style={{ border: "1px solid red" }}>
-                                    <label htmlFor="" className='text-[16px] font-semibold'>Category Image</label>
-                                    <input type="file" className='' />
-
+                                <div>
+                                    <label className="font-semibold block mb-2">Choose Image</label>
+                                    <DropifyInput />
                                 </div>
-                                <div className='h-80' style={{ border: "1px solid red" }}>
-                                    <label htmlFor="" className='text-[16px] font-semibold'>Category Image</label>
-                                    <input type="file" className='' />
-
+                                <div>
+                                    <label className="font-semibold block mb-2">Choose Image</label>
+                                    <DropifyInput />
                                 </div>
 
                             </div>
 
-                            <div>
+                            <div className='mt-2'>
                                 <label htmlFor="" className='text-[16px] font-semibold'>Product Name</label>
                                 <input type="text" placeholder='Product Name' name="" id="" className='text-sm w-full border-2 shadow-sm border-gray-300 h-[40px] p-2 rounded-sm mb-5' />
 
@@ -79,7 +77,7 @@ export default function AddProduct() {
                             </div>
 
 
-                            <div>
+                            <div className='mt-2'>
                                 <label htmlFor="" className='text-[16px] font-semibold'>Select Parent Category</label>
                                 <br />
                                 <select name="" id="" className='w-full text-sm  border-2 shadow-sm border-gray-300 h-[40px] p-2 rounded-sm mb-5'>
