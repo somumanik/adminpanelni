@@ -49,7 +49,7 @@ export default function AddProduct() {
                                 </div>
                             </div>
 
-                            <div>
+                            <div className='mt-2'>
                                 <label htmlFor="" className='text-[16px] font-semibold'>Product Name</label>
                                 <input type="text" placeholder='Product Name' name="" id="" className='text-sm w-full border-2 shadow-sm border-gray-300 h-[40px] p-2 rounded-sm mb-5' />
 
@@ -99,7 +99,7 @@ export default function AddProduct() {
                             </div>
 
 
-                            <div>
+                            <div className='mt-2'>
                                 <label htmlFor="" className='text-[16px] font-semibold'>Select Parent Category</label>
                                 <br />
                                 <select name="" id="" className='w-full text-sm  border-2 shadow-sm border-gray-300 h-[40px] p-2 rounded-sm mb-5'>
@@ -158,7 +158,7 @@ export default function AddProduct() {
                     </form>
                     {/* === WYSIWYG DESCRIPTION FIELD === */}
                     <div className="w-full">
-                        <label className="text-sm font-semibold mb-1 block">Description</label>
+                        <label className="text-[18px] font-semibold mb-1 block">Description</label>
 
                         {/* === Toolbar === */}
                         <div className="flex items-center gap-1 border border-b-0 rounded-t-md bg-white px-2 py-1 text-sm">
