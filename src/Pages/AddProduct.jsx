@@ -1,362 +1,308 @@
 
-
-
-// 'use client';
-// import DropifyInput from '../Dropify/DropifyInput'
-
-
-
-// export default function AddProduct() {
-//     const [description, setDescription] = useState('');
-
-//     return (
-//         <>
-//             <section className='mt-5 max-w-full rounded-md  ' id='addProduct'>
-//                 {/* <div className=' bg-slate-100 flex p-4 justify-between items-center form-heading' style={{ borderBottom: "1px solid #ccc" }}>
-//                     <h3 className='text-[26px] font-semibold'>Add Sub Category</h3>
-//                 </div> */}
-//                 <div>
-//                     <form action="" className='p-2'>
-//                         <div className='grid grid-cols-3 gap-5'>
-//                             <div>
-//                                 <div>
-//                                     <label className="font-semibold block mb-2">Choose Image</label>
-//                                     <DropifyInput />
-//                                 </div>
-//                                 <div>
-//                                     <label className="font-semibold block mb-2">Choose Image</label>
-//                                     <DropifyInput />
-//                                 </div>
-//                                 <div>
-//                                     <label className="font-semibold block mb-2">Choose Image</label>
-//                                     <DropifyInput />
-//                                 </div>
-
-//                             </div>
-
-//                             <div className='mt-2'>
-//                                 <label htmlFor="" className='text-[16px] font-semibold'>Product Name</label>
-//                                 <input type="text" placeholder='Product Name' name="" id="" className='text-sm w-full border-2 shadow-sm border-gray-300 h-[40px] p-2 rounded-sm mb-5' />
-
-//                                 <label htmlFor="" className='text-[16px] font-semibold'>Select Sub Category </label>
-//                                 <br />
-//                                 <select name="" id="" className='w-full text-sm  border-2 shadow-sm border-gray-300 h-[40px] p-2 rounded-sm mb-5'>
-//                                     <option value="">Select Category</option>
-//                                     <option value="">Mobile Phones</option>
-//                                     <option value="">Leptops</option>
-//                                     <option value="">Men's Wear</option>
-//                                     <option value="">Women's Wear</option>
-//                                 </select>
-
-//                                 <label htmlFor="" className='text-[16px] font-semibold'>Select Meterial</label>
-//                                 <br />
-//                                 <select name="" id="" className='w-full text-sm  border-2 shadow-sm border-gray-300 h-[40px] p-2 rounded-sm mb-5'>
-//                                     <option value="">Nothing Selected</option>
-//                                     <option value="">Neem</option>
-//                                     <option value="">Babbul</option>
-//                                     <option value="">Neem</option>
-//                                     <option value="">Babbul</option>
-//                                 </select>
-
-//                                 <label htmlFor="" className='text-[16px] font-semibold'>Select Product Type</label>
-//                                 <br />
-//                                 <select name="" id="" className='w-full text-sm  border-2 shadow-sm border-gray-300 h-[40px] p-2 rounded-sm mb-5'>
-//                                     <option value="">Nothing Selected</option>
-//                                     <option value="">Featured</option>
-//                                     <option value="">New Arrival</option>
-//                                     <option value="">OnSale</option>
-//                                 </select>
-
-//                                 <label htmlFor="" className='text-[16px] font-semibold'>Is Top Rated</label>
-//                                 <br />
-//                                 <select name="" id="" className='w-full text-sm  border-2 shadow-sm border-gray-300 h-[40px] p-2 rounded-sm mb-5'>
-//                                     <option value="">Nothing Selected</option>
-//                                     <option value="">Yes</option>
-//                                     <option value="">No</option>
-//                                 </select>
-
-
-//                                 <label htmlFor="" className='text-[16px] font-semibold'>Actual Price</label>
-//                                 <input type="text" placeholder='Actual Price' name="" id="" className='text-sm w-full border-2 shadow-sm border-gray-300 h-[40px] p-2 rounded-sm mb-5' />
-
-//                                 <label htmlFor="" className='text-[16px] font-semibold'>Total In Stocks</label>
-//                                 <input type="text" placeholder='Total In Stocks' name="" id="" className='text-sm w-full border-2 shadow-sm border-gray-300 h-[40px] p-2 rounded-sm mt-1' />
-//                             </div>
-
-//                             <div className='mt-2'>
-//                                 <label htmlFor="" className='text-[16px] font-semibold'>Select Parent Category</label>
-//                                 <br />
-//                                 <select name="" id="" className='w-full text-sm  border-2 shadow-sm border-gray-300 h-[40px] p-2 rounded-sm mb-5'>
-//                                     <option value="">Nothing Selected</option>
-//                                     <option value="">Mobile Phones</option>
-//                                     <option value="">Leptops</option>
-//                                     <option value="">Men's Wear</option>
-//                                     <option value="">Women's Wear</option>
-//                                 </select>
-
-//                                 <label htmlFor="" className='text-[16px] font-semibold'>Select Sub Sub Category</label>
-//                                 <br />
-//                                 <select name="" id="" className='w-full text-sm  border-2 shadow-sm border-gray-300 h-[40px] p-2 rounded-sm mb-5'>
-//                                     <option value="">Nothing Selected</option>
-//                                     <option value="">Neem</option>
-//                                     <option value="">Babbul</option>
-//                                     <option value="">Neem</option>
-//                                     <option value="">Babbul</option>
-//                                 </select>
-
-//                                 <label htmlFor="" className='text-[16px] font-semibold'>Select Color</label>
-//                                 <br />
-//                                 <select name="" id="" className='w-full text-sm  border-2 shadow-sm border-gray-300 h-[40px] p-2 rounded-sm mb-5'>
-//                                     <option value="">Nothing Selected</option>
-//                                     <option value="">Red</option>
-//                                     <option value="">Green</option>
-//                                     <option value="">Blue</option>
-//                                 </select>
-
-//                                 <label htmlFor="" className='text-[16px] font-semibold'>Is Best Selling</label>
-//                                 <br />
-//                                 <select name="" id="" className='w-full text-sm  border-2 shadow-sm border-gray-300 h-[40px] p-2 rounded-sm mb-5'>
-//                                     <option value="">Nothing Selected</option>
-//                                     <option value="">Yes</option>
-//                                     <option value="">No</option>
-//                                 </select>
-
-//                                 <label htmlFor="" className='text-[16px] font-semibold'>Is Upsell</label>
-//                                 <br />
-//                                 <select name="" id="" className='w-full text-sm  border-2 shadow-sm border-gray-300 h-[40px] p-2 rounded-sm mb-5'>
-//                                     <option value="">Nothing Selected</option>
-//                                     <option value="">Yes</option>
-//                                     <option value="">No</option>
-//                                 </select>
-
-//                                 <label htmlFor="" className='text-[16px] font-semibold'>Sale Price</label>
-//                                 <input type="text" placeholder='Sale Price' name="" id="" className='text-sm w-full border-2 shadow-sm border-gray-300 h-[40px] p-2 rounded-sm mb-5' />
-
-//                                 <label htmlFor="" className='text-[16px] font-semibold'>Order</label>
-//                                 <input type="text" placeholder='Order' name="" id="" className='text-sm w-full border-2 shadow-sm border-gray-300 h-[40px] p-2 rounded-sm mt-1' />
-//                             </div>
-//                         </div>
-
-//                         <div>
-//                             <div className='mt-3 col-span-3'>
-//                                 <label className='text-[16px] font-semibold block mb-2'>Product Description</label>
-//                                 {/* EditorProvider se wrap kar rahe hain Editor ko */}
-//                                 {/* <EditorProvider>
-//                                     <Editor
-//                                         value={description}
-//                                         onChange={(e) => setDescription(e.target.value)}
-//                                         style={{ minHeight: '200px' }}
-//                                     />
-//                                 </EditorProvider> */}
-//                                 <div className='mt-5'>
-//                                     <label className='text-[16px] font-semibold block mb-2'>Description</label>
-//                                     <ReactQuill
-//                                         theme="snow"
-//                                         value={description}
-//                                         onChange={setDescription}
-//                                         style={{ height: '250px', marginBottom: '50px' }}
-//                                     />
-//                                 </div>
-//                             </div>
-
-
-//                         </div>
-
-//                         <button className='text-white bg-purple-700 border-0 my-5 rounded-sm p-2'>Add Category</button>
-//                     </form>
-
-//                 </div>
-//             </section>
-//         </>
-//     )
-// }
-
-
 'use client';
 
-import React, { useState } from 'react';
-import DropifyInput from '../Dropify/DropifyInput';
+import React from 'react';
 import { useEditor, EditorContent } from '@tiptap/react';
+import DropifyInput from '../Dropify/DropifyInput'
 import StarterKit from '@tiptap/starter-kit';
+import Underline from '@tiptap/extension-underline';
+import Link from '@tiptap/extension-link';
+import Heading from '@tiptap/extension-heading';
+import TextStyle from '@tiptap/extension-text-style';
 
 
 export default function AddProduct() {
-    const [description, setDescription] = useState('');
-
     const editor = useEditor({
-        extensions: [StarterKit],
+        extensions: [
+            StarterKit,
+            Underline,
+            Link,
+            TextStyle,
+            Heading.configure({
+                levels: [1, 2, 3],
+            }),
+        ],
         content: '',
-        onUpdate({ editor }) {
-            setDescription(editor.getHTML());
-        },
     });
 
+    const setParagraph = () => editor?.chain().focus().setParagraph().run();
+    const setHeading = (level) => editor?.chain().focus().toggleHeading({ level }).run();
 
     return (
         <>
             <section className='mt-5 max-w-full rounded-md' id='addProduct'>
                 <div>
-                    <form action="" className='p-2'>
+                     <form action="" className='p-2'>
                         <div className='grid grid-cols-3 gap-5'>
-                            {/* LEFT COLUMN - Image Inputs */}
+                                <div>
+                                <div>
+                                    <label className="font-semibold block mb-2">Choose Image</label>
+                                    <DropifyInput />
+                                </div>
+                                <div>
+                                    <label className="font-semibold block mb-2">Choose Image</label>
+                                    <DropifyInput />
+                                </div>
+                                <div>
+                                    <label className="font-semibold block mb-2">Choose Image</label>
+                                    <DropifyInput />
+                                </div>
+                            </div>
+
                             <div>
-                                <div>
-                                    <label className="font-semibold block mb-2">Choose Image</label>
-                                    <DropifyInput />
-                                </div>
-                                <div>
-                                    <label className="font-semibold block mb-2">Choose Image</label>
-                                    <DropifyInput />
-                                </div>
-                                <div>
-                                    <label className="font-semibold block mb-2">Choose Image</label>
-                                    <DropifyInput />
-                                </div>
-                            </div>
+                                <label htmlFor="" className='text-[16px] font-semibold'>Product Name</label>
+                                <input type="text" placeholder='Product Name' name="" id="" className='text-sm w-full border-2 shadow-sm border-gray-300 h-[40px] p-2 rounded-sm mb-5' />
 
-                            {/* MIDDLE COLUMN - Product Info */}
-                            <div className='mt-2'>
-                                <label className='text-[16px] font-semibold'>Product Name</label>
-                                <input type="text" placeholder='Product Name' className='input-field' />
-
-                                <label className='text-[16px] font-semibold'>Select Sub Category</label>
-                                <select className='input-field'>
+                                <label htmlFor="" className='text-[16px] font-semibold'>Select Sub Category </label>
+                                <br />
+                                <select name="" id="" className='w-full text-sm  border-2 shadow-sm border-gray-300 h-[40px] p-2 rounded-sm mb-5'>
                                     <option value="">Select Category</option>
-                                    <option>Mobile Phones</option>
-                                    <option>Laptops</option>
-                                    <option>Men's Wear</option>
-                                    <option>Women's Wear</option>
+                                    <option value="">Mobile Phones</option>
+                                    <option value="">Leptops</option>
+                                    <option value="">Men's Wear</option>
+                                    <option value="">Women's Wear</option>
                                 </select>
 
-                                <label className='text-[16px] font-semibold'>Select Material</label>
-                                <select className='input-field'>
+                                <label htmlFor="" className='text-[16px] font-semibold'>Select Meterial</label>
+                                <br />
+                                <select name="" id="" className='w-full text-sm  border-2 shadow-sm border-gray-300 h-[40px] p-2 rounded-sm mb-5'>
                                     <option value="">Nothing Selected</option>
-                                    <option>Neem</option>
-                                    <option>Babbul</option>
+                                    <option value="">Neem</option>
+                                    <option value="">Babbul</option>
+                                    <option value="">Neem</option>
+                                    <option value="">Babbul</option>
                                 </select>
 
-                                <label className='text-[16px] font-semibold'>Select Product Type</label>
-                                <select className='input-field'>
+                                <label htmlFor="" className='text-[16px] font-semibold'>Select Product Type</label>
+                                <br />
+                                <select name="" id="" className='w-full text-sm  border-2 shadow-sm border-gray-300 h-[40px] p-2 rounded-sm mb-5'>
                                     <option value="">Nothing Selected</option>
-                                    <option>Featured</option>
-                                    <option>New Arrival</option>
-                                    <option>OnSale</option>
+                                    <option value="">Featured</option>
+                                    <option value="">New Arrival</option>
+                                    <option value="">OnSale</option>
                                 </select>
 
-                                <label className='text-[16px] font-semibold'>Is Top Rated</label>
-                                <select className='input-field'>
+                                <label htmlFor="" className='text-[16px] font-semibold'>Is Top Rated</label>
+                                <br />
+                                <select name="" id="" className='w-full text-sm  border-2 shadow-sm border-gray-300 h-[40px] p-2 rounded-sm mb-5'>
                                     <option value="">Nothing Selected</option>
-                                    <option>Yes</option>
-                                    <option>No</option>
+                                    <option value="">Yes</option>
+                                    <option value="">No</option>
                                 </select>
 
-                                <label className='text-[16px] font-semibold'>Actual Price</label>
-                                <input type="text" placeholder='Actual Price' className='input-field' />
 
-                                <label className='text-[16px] font-semibold'>Total In Stocks</label>
-                                <input type="text" placeholder='Total In Stocks' className='input-field' />
+                                <label htmlFor="" className='text-[16px] font-semibold'>Actual Price</label>
+                                <input type="text" placeholder='Actual Price' name="" id="" className='text-sm w-full border-2 shadow-sm border-gray-300 h-[40px] p-2 rounded-sm mb-5' />
+
+                                <label htmlFor="" className='text-[16px] font-semibold'>Total In Stocks</label>
+                                <input type="text" placeholder='Total In Stocks' name="" id="" className='text-sm w-full border-2 shadow-sm border-gray-300 h-[40px] p-2 rounded-sm mt-1' />
                             </div>
 
-                            {/* RIGHT COLUMN - More Options */}
-                            <div className='mt-2'>
-                                <label className='text-[16px] font-semibold'>Select Parent Category</label>
-                                <select className='input-field'>
-                                    <option>Nothing Selected</option>
-                                    <option>Mobile Phones</option>
-                                    <option>Laptops</option>
-                                    <option>Men's Wear</option>
-                                    <option>Women's Wear</option>
+
+                            <div>
+                                <label htmlFor="" className='text-[16px] font-semibold'>Select Parent Category</label>
+                                <br />
+                                <select name="" id="" className='w-full text-sm  border-2 shadow-sm border-gray-300 h-[40px] p-2 rounded-sm mb-5'>
+                                    <option value="">Nothing Selected</option>
+                                    <option value="">Mobile Phones</option>
+                                    <option value="">Leptops</option>
+                                    <option value="">Men's Wear</option>
+                                    <option value="">Women's Wear</option>
                                 </select>
 
-                                <label className='text-[16px] font-semibold'>Select Sub Sub Category</label>
-                                <select className='input-field'>
-                                    <option>Nothing Selected</option>
-                                    <option>Neem</option>
-                                    <option>Babbul</option>
+                                <label htmlFor="" className='text-[16px] font-semibold'>Select Sub Sub Category</label>
+                                <br />
+                                <select name="" id="" className='w-full text-sm  border-2 shadow-sm border-gray-300 h-[40px] p-2 rounded-sm mb-5'>
+                                    <option value="">Nothing Selected</option>
+                                    <option value="">Neem</option>
+                                    <option value="">Babbul</option>
+                                    <option value="">Neem</option>
+                                    <option value="">Babbul</option>
                                 </select>
 
-                                <label className='text-[16px] font-semibold'>Select Color</label>
-                                <select className='input-field'>
-                                    <option>Nothing Selected</option>
-                                    <option>Red</option>
-                                    <option>Green</option>
-                                    <option>Blue</option>
+                                <label htmlFor="" className='text-[16px] font-semibold'>Select Color</label>
+                                <br />
+                                <select name="" id="" className='w-full text-sm  border-2 shadow-sm border-gray-300 h-[40px] p-2 rounded-sm mb-5'>
+                                    <option value="">Nothing Selected</option>
+                                    <option value="">Red</option>
+                                    <option value="">Green</option>
+                                    <option value="">Blue</option>
                                 </select>
 
-                                <label className='text-[16px] font-semibold'>Is Best Selling</label>
-                                <select className='input-field'>
-                                    <option>Nothing Selected</option>
-                                    <option>Yes</option>
-                                    <option>No</option>
+                                <label htmlFor="" className='text-[16px] font-semibold'>Is Best Selling</label>
+                                <br />
+                                <select name="" id="" className='w-full text-sm  border-2 shadow-sm border-gray-300 h-[40px] p-2 rounded-sm mb-5'>
+                                    <option value="">Nothing Selected</option>
+                                    <option value="">Yes</option>
+                                    <option value="">No</option>
                                 </select>
 
-                                <label className='text-[16px] font-semibold'>Is Upsell</label>
-                                <select className='input-field'>
-                                    <option>Nothing Selected</option>
-                                    <option>Yes</option>
-                                    <option>No</option>
+                                <label htmlFor="" className='text-[16px] font-semibold'>Is Upsell</label>
+                                <br />
+                                <select name="" id="" className='w-full text-sm  border-2 shadow-sm border-gray-300 h-[40px] p-2 rounded-sm mb-5'>
+                                    <option value="">Nothing Selected</option>
+                                    <option value="">Yes</option>
+                                    <option value="">No</option>
                                 </select>
 
-                                <label className='text-[16px] font-semibold'>Sale Price</label>
-                                <input type="text" placeholder='Sale Price' className='input-field' />
+                                <label htmlFor="" className='text-[16px] font-semibold'>Sale Price</label>
+                                <input type="text" placeholder='Sale Price' name="" id="" className='text-sm w-full border-2 shadow-sm border-gray-300 h-[40px] p-2 rounded-sm mb-5' />
 
-                                <label className='text-[16px] font-semibold'>Order</label>
-                                <input type="text" placeholder='Order' className='input-field' />
+                                <label htmlFor="" className='text-[16px] font-semibold'>Order</label>
+                                <input type="text" placeholder='Order' name="" id="" className='text-sm w-full border-2 shadow-sm border-gray-300 h-[40px] p-2 rounded-sm mt-1' />
                             </div>
                         </div>
 
-                        {/* === WYSIWYG DESCRIPTION FIELD === */}
-                        <section className='mt-5 max-w-full rounded-md' id='addProduct'>
-                            <div>
-                                <form action="" className='p-2'>
-                                    <div className='grid grid-cols-3 gap-5'>
-                                        {/* ... your other columns exactly same as before ... */}
-                                    </div>
 
-                                    {/* === Tiptap DESCRIPTION FIELD === */}
-                                    <div className='mt-3 col-span-3'>
-                                        <label className='text-[16px] font-semibold block mb-2'>Product Description</label>
-                                        <div className="border border-gray-300 rounded-md p-2 min-h-[200px]">
-                                            <EditorContent editor={editor} />
-                                        </div>
-                                    </div>
-
-                                    <button className='text-white bg-purple-700 border-0 my-5 rounded-sm p-2'>
-                                        Add Category
-                                    </button>
-                                </form>
-                            </div>
-                        </section>
-                        <style jsx>{`
-                .input-field {
-                    width: 100%;
-                    border: 2px solid #d1d5db;
-                    height: 40px;
-                    padding: 8px;
-                    font-size: 14px;
-                    border-radius: 4px;
-                    margin-bottom: 20px;
-                    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-                }
-            `}</style>
                         <button className='text-white bg-purple-700 border-0 my-5 rounded-sm p-2'>Add Category</button>
                     </form>
+                    {/* === WYSIWYG DESCRIPTION FIELD === */}
+                    <div className="w-full">
+                        <label className="text-sm font-semibold mb-1 block">Description</label>
+
+                        {/* === Toolbar === */}
+                        <div className="flex items-center gap-1 border border-b-0 rounded-t-md bg-white px-2 py-1 text-sm">
+                            {/* Dropdown for heading/paragraph */}
+                            <select
+                                className="text-sm border rounded px-1 py-0.5"
+                                onChange={(e) => {
+                                    const value = e.target.value;
+                                    if (value === 'paragraph') setParagraph();
+                                    else if (value.startsWith('heading')) setHeading(Number(value.split('-')[1]));
+                                }}
+                            >
+                                <option value="paragraph">Normal</option>
+                                <option value="heading-1">Heading 1</option>
+                                <option value="heading-2">Heading 2</option>
+                                <option value="heading-3">Heading 3</option>
+                            </select>
+
+                            {/* Formatting buttons */}
+                            <button onClick={() => editor?.chain().focus().toggleBold().run()} className="toolbar-btn">B</button>
+                            <button onClick={() => editor?.chain().focus().toggleItalic().run()} className="toolbar-btn italic">I</button>
+                            <button onClick={() => editor?.chain().focus().toggleUnderline().run()} className="toolbar-btn underline">U</button>
+                            <button onClick={() => {
+                                const url = prompt('Enter URL');
+                                if (url) {
+                                    editor?.chain().focus().setLink({ href: url }).run();
+                                }
+                            }} className="toolbar-btn">🔗</button>
+                            <button onClick={() => editor?.chain().focus().toggleBulletList().run()} className="toolbar-btn">• List</button>
+                            <button onClick={() => editor?.chain().focus().toggleOrderedList().run()} className="toolbar-btn">1. List</button>
+                            <button onClick={() => editor?.chain().focus().unsetAllMarks().clearNodes().run()} className="toolbar-btn">Tx</button>
+                        </div>
+
+                        {/* === Editor Area === */}
+                        <div className="border border-gray-300 rounded-b-md p-2 min-h-[200px]">
+                            <EditorContent editor={editor} />
+                        </div>
+
+                        {/* Tailwind styles */}
+                        <style jsx>{`
+                                    .toolbar-btn {
+                                    padding: 4px 6px;
+                                    border: 1px solid #ddd;
+                                    border-radius: 4px;
+                                    background: #f9f9f9;
+                                    cursor: pointer;
+                                    }
+                                    .toolbar-btn:hover {
+                                    background-color: #f1f1f1;
+                                    }
+                                `}
+                        </style>
+                    </div>
+
+
                 </div>
             </section>
-
-            {/* Tailwind helper class for inputs (optional) */}
-            <style jsx>{`
-                .input-field {
-                    width: 100%;
-                    border: 2px solid #d1d5db;
-                    height: 40px;
-                    padding: 8px;
-                    font-size: 14px;
-                    border-radius: 4px;
-                    margin-bottom: 20px;
-                    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-                }
-            `}</style>
         </>
     );
 }
+
+
+
+// 'use client';
+
+// import React from 'react';
+// import { useEditor, EditorContent } from '@tiptap/react';
+// import StarterKit from '@tiptap/starter-kit';
+// import Underline from '@tiptap/extension-underline';
+// import Link from '@tiptap/extension-link';
+// import Heading from '@tiptap/extension-heading';
+// import TextStyle from '@tiptap/extension-text-style';
+
+// export default function RichTextEditor() {
+//   const editor = useEditor({
+//     extensions: [
+//       StarterKit,
+//       Underline,
+//       Link,
+//       TextStyle,
+//       Heading.configure({
+//         levels: [1, 2, 3],
+//       }),
+//     ],
+//     content: '',
+//   });
+
+//   const setParagraph = () => editor?.chain().focus().setParagraph().run();
+//   const setHeading = (level) => editor?.chain().focus().toggleHeading({ level }).run();
+
+//   return (
+//     <div className="w-full">
+//       <label className="text-sm font-semibold mb-1 block">Description</label>
+
+//       {/* === Toolbar === */}
+//       <div className="flex items-center gap-1 border border-b-0 rounded-t-md bg-white px-2 py-1 text-sm">
+//         {/* Dropdown for heading/paragraph */}
+//         <select
+//           className="text-sm border rounded px-1 py-0.5"
+//           onChange={(e) => {
+//             const value = e.target.value;
+//             if (value === 'paragraph') setParagraph();
+//             else if (value.startsWith('heading')) setHeading(Number(value.split('-')[1]));
+//           }}
+//         >
+//           <option value="paragraph">Normal</option>
+//           <option value="heading-1">Heading 1</option>
+//           <option value="heading-2">Heading 2</option>
+//           <option value="heading-3">Heading 3</option>
+//         </select>
+
+//         {/* Formatting buttons */}
+//         <button onClick={() => editor?.chain().focus().toggleBold().run()} className="toolbar-btn">B</button>
+//         <button onClick={() => editor?.chain().focus().toggleItalic().run()} className="toolbar-btn italic">I</button>
+//         <button onClick={() => editor?.chain().focus().toggleUnderline().run()} className="toolbar-btn underline">U</button>
+//         <button onClick={() => {
+//           const url = prompt('Enter URL');
+//           if (url) {
+//             editor?.chain().focus().setLink({ href: url }).run();
+//           }
+//         }} className="toolbar-btn">🔗</button>
+//         <button onClick={() => editor?.chain().focus().toggleBulletList().run()} className="toolbar-btn">• List</button>
+//         <button onClick={() => editor?.chain().focus().toggleOrderedList().run()} className="toolbar-btn">1. List</button>
+//         <button onClick={() => editor?.chain().focus().unsetAllMarks().clearNodes().run()} className="toolbar-btn">Tx</button>
+//       </div>
+
+//       {/* === Editor Area === */}
+//       <div className="border border-gray-300 rounded-b-md p-2 min-h-[200px]">
+//         <EditorContent editor={editor} />
+//       </div>
+
+//       {/* Tailwind styles */}
+//       <style jsx>{`
+//         .toolbar-btn {
+//           padding: 4px 6px;
+//           border: 1px solid #ddd;
+//           border-radius: 4px;
+//           background: #f9f9f9;
+//           cursor: pointer;
+//         }
+//         .toolbar-btn:hover {
+//           background-color: #f1f1f1;
+//         }
+//       `}</style>
+//     </div>
+//   );
+// }
