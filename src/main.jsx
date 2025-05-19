@@ -39,6 +39,15 @@ import Profile from './Pages/Profile.jsx';
 import Login from './Pages/Login.jsx';
 import Error from './Pages/Error.jsx';
 
+
+
+
+// git add public/_redirects
+// git commit -m "Add redirects for Netlify"
+// git push
+
+
+
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
